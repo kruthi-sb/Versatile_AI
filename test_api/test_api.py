@@ -16,7 +16,7 @@ print(response.text)
 # for vision model:
 import PIL.Image as Image
 
-img = Image.open('./sample_img.png')
+img = Image.open('C:\\Users\\kruth\\OneDrive\\Desktop\\Versatile_AI\\test_api\\sample_img.png')
 img_model = genai.GenerativeModel('gemini-pro-vision')
 response = img_model.generate_content(["Write a short, engaging blog post based on this picture. It should include a description of the meal in the photo and talk about my journey meal prepping.", img], stream=True)
 response.resolve()
